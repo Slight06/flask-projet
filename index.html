@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Accueil - Mon projet Flask</title>
+  </head>
+  <body>
+    <h1>Liste des catégories</h1>
+    <ul>
+      {% for category in categories %}
+      <li>
+        <a href="{{ url_for('category_articles', category_id=category.id) }}">
+          {{ category.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
